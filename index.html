@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evandro Dresch, fingerstyle guitar</title>
+<meta name="description" content="Instrumental fingerstyle guitar from Freiburg. Dreamy, transcendental, no vocals. Listen to Larks and Elo.">
+<link rel="canonical" href="https://evandrodresch.com/">
+<meta name="theme-color" content="#0a0f13">
+<meta name="color-scheme" content="dark">
+<meta name="google-site-verification" content="qtnESdeo5ANocM5CYpPZaOxfWOJtB3L_jb3oHewimkw">
+
+<!-- Link previews (WhatsApp, Signal, Mastodon, LinkedIn ...) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Evandro Dresch">
+<meta property="og:title" content="Evandro Dresch, fingerstyle guitar">
+<meta property="og:description" content="Dreamy transcendental guitar. Only guitar, no vocals.">
+<meta property="og:url" content="https://evandrodresch.com/">
+<meta property="og:image" content="https://evandrodresch.com/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Evandro Dresch playing a 12-string guitar on stage">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/cormorant-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Evandro Dresch",
+  "alternateName": "E. Dresch",
+  "genre": ["Fingerstyle guitar", "Folk", "Instrumental"],
+  "url": "https://evandrodresch.com/",
+  "image": "https://evandrodresch.com/images/og.jpg",
+  "foundingLocation": "Freiburg im Breisgau, Germany",
+  "email": "music@dresch.org",
+  "sameAs": [
+    "https://edresch.bandcamp.com/",
+    "https://open.spotify.com/artist/1KqGMGqCPeb7OuQiZlI750",
+    "https://soundcloud.com/e-dresch",
+    "https://www.instagram.com/antiprocontra/",
+    "https://www.facebook.com/antiprocontra/",
+    "https://dresch.org/"
+  ]
+}
+</script>
+
+<style>
+/* ---------- Fonts: self-hosted, no third-party requests ---------- */
+@font-face { font-family: "Cormorant"; src: url("fonts/cormorant-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant"; src: url("fonts/cormorant-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant"; src: url("fonts/cormorant-latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+
+/* ---------- Tokens: colours taken from the stage photo ---------- */
+:root {
+  --bg: #0a0f13;          /* curtain blue-black */
+  --bg-2: #0e161b;
+  --ink: #ece5d8;         /* warm paper white */
+  --muted: #a9a196;
+  --amber: #d9a35b;       /* spruce top in stage light */
+  --amber-soft: #d9a35b33;
+  --steel: #aab2b6;
+  --bronze: #c48a52;
+  --line: #ece5d81f;
+  --display: "Cormorant", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --text: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --measure: 38rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 4px; border-radius: 2px; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 1rem; top: -3rem; background: var(--amber); color: var(--bg); padding: .5rem .8rem; z-index: 10; text-decoration: none; }
+.skip:focus { top: 1rem; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; display: grid; min-height: 100svh; }
+.hero-photo { margin: 0; position: relative; height: 74svh; min-height: 420px; overflow: hidden; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 48% 30%; }
+.hero-photo::after { /* fade photo into the night */
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 55%, var(--bg) 100%);
+}
+.hero-text {
+  position: relative; z-index: 1;
+  margin-top: -7rem;
+  padding: 0 1.25rem 3.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.sparkles { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+.kicker {
+  margin: 0 0 1rem; color: var(--muted);
+  font-size: .78rem; letter-spacing: .22em; text-transform: uppercase;
+}
+h1 {
+  margin: 0;
+  font: 600 clamp(3rem, 11vw, 6.2rem)/.92 var(--display);
+  letter-spacing: .01em;
+}
+h1 span { display: block; }
+.tagline {
+  margin: 1rem 0 2.2rem;
+  font: italic 500 clamp(1.35rem, 4vw, 1.9rem)/1.2 var(--display);
+  color: var(--amber);
+}
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .75rem 1.25rem;
+  border: 1px solid var(--amber); border-radius: 999px;
+  color: var(--ink); text-decoration: none; font-size: .95rem; letter-spacing: .04em;
+  transition: background-color .25s, color .25s;
+}
+.btn:hover { background: var(--amber); color: var(--bg); }
+.btn.ghost { border-color: var(--line); }
+.btn.ghost:hover { border-color: var(--ink); background: transparent; color: var(--ink); }
+.btn svg { width: .9em; height: .9em; fill: currentColor; }
+
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1fr 1fr; height: 100svh; min-height: 640px; }
+  .hero-photo { height: 100%; min-height: 0; }
+  .hero-photo::after { background: linear-gradient(to right, transparent 70%, var(--bg) 100%); }
+  .hero-text { margin: 0; padding: 4rem clamp(2rem, 6vw, 6rem); }
+}
+
+/* ---------- Sections ---------- */
+main section { padding: 4.5rem 1.25rem; }
+.wrap { max-width: var(--measure); margin: 0 auto; }
+.wide { max-width: 64rem; margin: 0 auto; }
+h2 {
+  margin: 0 0 1.5rem;
+  font: 600 clamp(2rem, 5vw, 2.8rem)/1 var(--display);
+}
+h2 small {
+  display: block; margin-bottom: .6rem;
+  font: 400 .75rem/1 var(--text); letter-spacing: .22em; text-transform: uppercase; color: var(--muted);
+}
+p { margin: 0 0 1.1em; }
+.muted { color: var(--muted); }
+
+/* A course (pair of strings) as section divider */
+.course-divider { display: block; width: min(64rem, 100% - 2.5rem); height: 24px; margin: 0 auto; overflow: visible; }
+
+/* ---------- Listen ---------- */
+#listen { background: var(--bg-2); }
+.listen-grid { display: grid; gap: 2.5rem; align-items: center; }
+.listen-photo { margin: 0; }
+.listen-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+@media (min-width: 800px) { .listen-grid { grid-template-columns: 5fr 6fr; gap: 4rem; } }
+
+.tracks { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+.track {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .4rem 1rem;
+  padding: 1rem 0; border-top: 1px solid var(--line);
+}
+.track:last-child { border-bottom: 1px solid var(--line); }
+.play {
+  grid-row: span 2;
+  width: 3rem; height: 3rem; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1px solid var(--amber); background: transparent; color: var(--amber); cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+.play:hover, .track.playing .play { background: var(--amber); color: var(--bg); }
+.play svg { width: 1rem; height: 1rem; fill: currentColor; }
+.play .i-pause, .track.playing .play .i-play { display: none; }
+.track.playing .play .i-pause { display: block; }
+.track-title { font: 600 1.6rem/1 var(--display); }
+.track-time { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.seek {
+  grid-column: 2 / 4; width: 100%; height: 1.25rem; margin: 0;
+  -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer;
+}
+.seek::-webkit-slider-runnable-track { height: 2px; background: linear-gradient(to right, var(--amber) var(--p, 0%), var(--line) var(--p, 0%)); }
+.seek::-moz-range-track { height: 2px; background: var(--line); }
+.seek::-moz-range-progress { height: 2px; background: var(--amber); }
+.seek::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; margin-top: -5px; border-radius: 50%; background: var(--ink); }
+.seek::-moz-range-thumb { width: 12px; height: 12px; border: 0; border-radius: 50%; background: var(--ink); }
+.track.missing .play { opacity: .35; cursor: default; }
+.track.missing .play:hover { background: transparent; color: var(--amber); }
+.track.missing .seek { display: none; }
+.track-note { grid-column: 2 / 4; font-size: .85rem; color: var(--muted); }
+.track-note a { color: var(--amber); }
+
+/* ---------- Elsewhere: six courses of a 12-string ---------- */
+.courses { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.courses a {
+  display: grid; grid-template-columns: 7.5rem 1fr; align-items: center; gap: 1rem;
+  padding: .55rem 0; text-decoration: none;
+}
+.courses .label { font-size: .95rem; letter-spacing: .04em; transition: color .2s; }
+.courses a:hover .label, .courses a:focus-visible .label { color: var(--amber); }
+.courses svg { width: 100%; height: 24px; overflow: visible; }
+.mail {
+  display: inline-block; margin-top: .25rem;
+  font: 500 clamp(1.5rem, 5vw, 2rem)/1.2 var(--display);
+  color: var(--amber); text-decoration: none; border-bottom: 1px solid var(--amber-soft);
+}
+.mail:hover { border-bottom-color: var(--amber); }
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 2.5rem 1.25rem 3rem; border-top: 1px solid var(--line);
+  font-size: .85rem; color: var(--muted);
+}
+footer .wide { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; }
+footer nav { display: flex; gap: 1.25rem; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#listen">Skip to music</a>
+
+<header class="hero">
+  <figure class="hero-photo">
+    <picture>
+      <source type="image/avif" srcset="images/stage-720.avif 720w, images/stage-1080.avif 1080w, images/stage-1600.avif 1600w" sizes="(min-width: 900px) 50vw, 100vw">
+      <source type="image/webp" srcset="images/stage-720.webp 720w, images/stage-1080.webp 1080w, images/stage-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw">
+      <img src="images/stage-1080.jpg" width="1080" height="1618" alt="Evandro Dresch on stage, seated, playing a 12-string acoustic guitar in front of a glittering curtain" fetchpriority="high">
+    </picture>
+  </figure>
+
+  <div class="hero-text">
+    <canvas class="sparkles" aria-hidden="true"></canvas>
+    <p class="kicker">Fingerstyle guitar · Freiburg</p>
+    <h1><span>Evandro</span><span>Dresch</span></h1>
+    <p class="tagline">Dreamy transcendental guitar</p>
+    <div class="actions">
+      <a class="btn" href="#listen"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg>Listen</a>
+      <a class="btn ghost" href="https://edresch.bandcamp.com/" rel="me">Bandcamp</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="listen" aria-labelledby="listen-h">
+    <div class="wide listen-grid">
+      <figure class="listen-photo">
+        <picture>
+          <source type="image/avif" srcset="images/hand-600.avif 600w, images/hand-1000.avif 1000w" sizes="(min-width: 800px) 28rem, 100vw">
+          <source type="image/webp" srcset="images/hand-600.webp 600w, images/hand-1000.webp 1000w" sizes="(min-width: 800px) 28rem, 100vw">
+          <img src="images/hand-1000.webp" width="1000" height="1000" loading="lazy" decoding="async" alt="Close-up of a right hand picking the strings of a 12-string guitar in golden evening light">
+        </picture>
+      </figure>
+
+      <div>
+        <h2 id="listen-h"><small>Listen</small>Two pieces</h2>
+        <ul class="tracks">
+          <li class="track" data-src="audio/larks.mp3" data-title="Larks">
+            <button class="play" type="button" aria-label="Play Larks">
+              <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 1.5v13l11-6.5z"/></svg>
+              <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg>
+            </button>
+            <span class="track-title">Larks</span>
+            <span class="track-time">0:00</span>
+            <input class="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek in Larks">
+          </li>
+          <li class="track" data-src="audio/elo.mp3" data-title="Elo">
+            <button class="play" type="button" aria-label="Play Elo">
+              <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 1.5v13l11-6.5z"/></svg>
+              <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg>
+            </button>
+            <span class="track-title">Elo</span>
+            <span class="track-time">0:00</span>
+            <input class="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek in Elo">
+          </li>
+        </ul>
+        <p class="muted">More on <a href="https://edresch.bandcamp.com/">Bandcamp</a>, <a href="https://open.spotify.com/artist/1KqGMGqCPeb7OuQiZlI750">Spotify</a> and <a href="https://soundcloud.com/e-dresch">SoundCloud</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <h2 id="about-h"><small>About</small>Only guitar, no vocals</h2>
+      <p>Born and raised in Brazil, Evandro picked up the guitar at 14. Classic rock came first. Then he found the great folk guitarists: Bert Jansch, Leo Kottke and John Fahey. After a move to a small Austrian village, he began to write his own pieces.</p>
+      <p>Life took some turns, and the music paused for years. He started recording again in 2018, lost the thread when the pandemic hit, and picked it back up in 2023.</p>
+      <p class="muted">He lives in Freiburg, Germany.</p>
+    </div>
+  </section>
+
+  <svg class="course-divider" viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true" data-pluck="view">
+    <path data-y="9" data-f="1" d="M0 9 Q500 9 1000 9" stroke="var(--steel)" stroke-width="0.8" fill="none" vector-effect="non-scaling-stroke" opacity=".55"/>
+    <path data-y="15" data-f="1" d="M0 15 Q500 15 1000 15" stroke="var(--steel)" stroke-width="0.8" fill="none" vector-effect="non-scaling-stroke" opacity=".55"/>
+  </svg>
+
+  <section id="live" aria-labelledby="live-h">
+    <div class="wrap">
+      <h2 id="live-h"><small>Live</small>Concerts</h2>
+      <p>No dates right now. For concerts, house concerts and small festivals, write to me:</p>
+      <a class="mail" href="mailto:music@dresch.org">music@dresch.org</a>
+    </div>
+  </section>
+
+  <section id="elsewhere" aria-labelledby="elsewhere-h">
+    <div class="wrap">
+      <h2 id="elsewhere-h"><small>Elsewhere</small>Six courses, twelve strings</h2>
+      <ul class="courses">
+        <!-- Thin to thick, like a 12-string: two unison courses in steel, four octave courses in steel + phosphor bronze -->
+        <li><a href="https://edresch.bandcamp.com/" rel="me"><span class="label">Bandcamp</span>
+          <svg viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true">
+            <path data-y="9" data-f="1" d="M0 9 Q500 9 1000 9" stroke="var(--steel)" stroke-width="0.8" fill="none" vector-effect="non-scaling-stroke"/>
+            <path data-y="15" data-f="1" d="M0 15 Q500 15 1000 15" stroke="var(--steel)" stroke-width="0.8" fill="none" vector-effect="non-scaling-stroke"/>
+          </svg></a></li>
+        <li><a href="https://open.spotify.com/artist/1KqGMGqCPeb7OuQiZlI750" rel="me"><span class="label">Spotify</span>
+          <svg viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true">
+            <path data-y="9" data-f="1" d="M0 9 Q500 9 1000 9" stroke="var(--steel)" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/>
+            <path data-y="15" data-f="1" d="M0 15 Q500 15 1000 15" stroke="var(--steel)" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/>
+          </svg></a></li>
+        <li><a href="https://soundcloud.com/e-dresch" rel="me"><span class="label">SoundCloud</span>
+          <svg viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true">
+            <path data-y="9" data-f="2" d="M0 9 Q500 9 1000 9" stroke="var(--steel)" stroke-width="0.8" fill="none" vector-effect="non-scaling-stroke"/>
+            <path data-y="15" data-f="1" d="M0 15 Q500 15 1000 15" stroke="var(--bronze)" stroke-width="1.4" fill="none" vector-effect="non-scaling-stroke"/>
+          </svg></a></li>
+        <li><a href="https://www.youtube.com/watch?v=00MfXKwPgDU"><span class="label">YouTube</span>
+          <svg viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true">
+            <path data-y="9" data-f="2" d="M0 9 Q500 9 1000 9" stroke="var(--steel)" stroke-width="0.9" fill="none" vector-effect="non-scaling-stroke"/>
+            <path data-y="15" data-f="1" d="M0 15 Q500 15 1000 15" stroke="var(--bronze)" stroke-width="1.8" fill="none" vector-effect="non-scaling-stroke"/>
+          </svg></a></li>
+        <li><a href="https://www.instagram.com/antiprocontra/" rel="me"><span class="label">Instagram</span>
+          <svg viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true">
+            <path data-y="9" data-f="2" d="M0 9 Q500 9 1000 9" stroke="var(--steel)" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/>
+            <path data-y="15" data-f="1" d="M0 15 Q500 15 1000 15" stroke="var(--bronze)" stroke-width="2.2" fill="none" vector-effect="non-scaling-stroke"/>
+          </svg></a></li>
+        <li><a href="https://www.facebook.com/antiprocontra/" rel="me"><span class="label">Facebook</span>
+          <svg viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true">
+            <path data-y="9" data-f="2" d="M0 9 Q500 9 1000 9" stroke="var(--steel)" stroke-width="1.1" fill="none" vector-effect="non-scaling-stroke"/>
+            <path data-y="15" data-f="1" d="M0 15 Q500 15 1000 15" stroke="var(--bronze)" stroke-width="2.7" fill="none" vector-effect="non-scaling-stroke"/>
+          </svg></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wide">
+    <span>© 2026 Evandro Dresch · Stage photo: Andreas W.</span>
+    <nav aria-label="Legal">
+      <a href="https://dresch.org/" rel="me">dresch.org</a>
+      <a href="legal.html">Impressum</a>
+      <a href="legal.html#privacy">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* ---------- Plucked strings: damped sine on the quadratic control point ----------
+     The octave string (data-f="2") swings at twice the frequency, with less amplitude. */
+  const running = new WeakMap();
+  function pluck(svg, amp = 5) {
+    if (reduce.matches) return;
+    const paths = [...svg.querySelectorAll("path")];
+    const t0 = performance.now();
+    const id = {};
+    running.set(svg, id);
+    (function frame(now) {
+      if (running.get(svg) !== id) return;
+      const t = (now - t0) / 1000;
+      const decay = Math.exp(-t / 0.3);
+      paths.forEach((p, i) => {
+        const y0 = +p.dataset.y, f = +p.dataset.f || 1;
+        const a = amp * 2 * (f === 2 ? 0.55 : 1) * (i ? 1 : 0.85);
+        const y = y0 + a * decay * Math.sin(2 * Math.PI * 7 * f * t + i * 0.6);
+        p.setAttribute("d", `M0 ${y0} Q500 ${y.toFixed(2)} 1000 ${y0}`);
+      });
+      if (t < 1.6) requestAnimationFrame(frame);
+      else paths.forEach(p => p.setAttribute("d", `M0 ${p.dataset.y} Q500 ${p.dataset.y} 1000 ${p.dataset.y}`));
+    })(t0);
+  }
+  document.querySelectorAll(".courses a").forEach(a => {
+    const svg = a.querySelector("svg");
+    a.addEventListener("pointerenter", () => pluck(svg));
+    a.addEventListener("focus", () => pluck(svg));
+  });
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { pluck(e.target, 3); io.unobserve(e.target); }
+    }), { threshold: 1 });
+    document.querySelectorAll('[data-pluck="view"]').forEach(s => io.observe(s));
+  }
+
+  /* ---------- Sparkles: a few slow-twinkling lights, echoing the stage curtain ---------- */
+  const cv = document.querySelector(".sparkles");
+  const ctx = cv.getContext("2d");
+  let dots = [], w = 0, h = 0, visible = true, raf = 0;
+  function size() {
+    const r = cv.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
+    w = r.width; h = r.height;
+    cv.width = w * dpr; cv.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.round(Math.min(70, w * h / 9000));
+    dots = Array.from({ length: n }, () => ({
+      x: Math.random() * w, y: Math.random() * h,
+      r: 0.4 + Math.random() * 1.3,
+      s: 0.25 + Math.random() * 0.9,          /* twinkle speed */
+      p: Math.random() * Math.PI * 2,
+      warm: Math.random() < 0.35
+    }));
+  }
+  function draw(now) {
+    ctx.clearRect(0, 0, w, h);
+    const t = now / 1000;
+    for (const d of dots) {
+      const a = reduce.matches ? 0.35 : 0.12 + 0.5 * (0.5 + 0.5 * Math.sin(t * d.s + d.p)) ** 3;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fillStyle = d.warm ? `rgba(240,200,140,${a})` : `rgba(236,229,216,${a})`;
+      ctx.fill();
+    }
+    if (!reduce.matches && visible) raf = requestAnimationFrame(draw);
+  }
+  size(); requestAnimationFrame(draw);
+  addEventListener("resize", () => { size(); if (reduce.matches) requestAnimationFrame(draw); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => {
+      visible = e.isIntersecting;
+      cancelAnimationFrame(raf);
+      if (visible) raf = requestAnimationFrame(draw);
+    }).observe(cv);
+  }
+  reduce.addEventListener?.("change", () => requestAnimationFrame(draw));
+
+  /* ---------- Audio player: self-hosted files, one track at a time ---------- */
+  const fmt = s => isFinite(s) ? `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}` : "0:00";
+  const tracks = [...document.querySelectorAll(".track")];
+  let current = null;
+
+  tracks.forEach(li => {
+    const audio = new Audio();
+    audio.preload = "metadata";
+    audio.src = li.dataset.src;
+    const btn = li.querySelector(".play"), time = li.querySelector(".track-time"), seek = li.querySelector(".seek");
+    const title = li.dataset.title;
+    li.audio = audio;
+
+    const setP = () => {
+      const v = audio.duration ? audio.currentTime / audio.duration * 1000 : 0;
+      seek.value = v; seek.style.setProperty("--p", v / 10 + "%");
+    };
+    audio.addEventListener("loadedmetadata", () => { time.textContent = fmt(audio.duration); });
+    audio.addEventListener("timeupdate", () => { setP(); time.textContent = fmt(audio.currentTime) + " / " + fmt(audio.duration); });
+    audio.addEventListener("ended", () => { stop(li); audio.currentTime = 0; setP(); time.textContent = fmt(audio.duration); });
+    audio.addEventListener("error", () => {
+      li.classList.add("missing");
+      btn.disabled = true;
+      btn.setAttribute("aria-label", title + " is not available yet");
+      time.textContent = "";
+      if (!li.querySelector(".track-note")) {
+        const n = document.createElement("span");
+        n.className = "track-note";
+        n.innerHTML = 'Coming soon here. Meanwhile, listen on <a href="https://edresch.bandcamp.com/">Bandcamp</a>.';
+        li.append(n);
+      }
+    });
+
+    btn.addEventListener("click", () => {
+      if (current === li && !audio.paused) { audio.pause(); stop(li); return; }
+      if (current && current !== li) { current.audio.pause(); stop(current); }
+      current = li;
+      audio.play().then(() => {
+        li.classList.add("playing");
+        btn.setAttribute("aria-label", "Pause " + title);
+        if ("mediaSession" in navigator) {
+          navigator.mediaSession.metadata = new MediaMetadata({
+            title, artist: "Evandro Dresch",
+            artwork: [{ src: "images/hand-600.webp", sizes: "600x600", type: "image/webp" }]
+          });
+        }
+      }).catch(() => {});
+    });
+    seek.addEventListener("input", () => {
+      if (audio.duration) audio.currentTime = seek.value / 1000 * audio.duration;
+      seek.style.setProperty("--p", seek.value / 10 + "%");
+    });
+  });
+  function stop(li) {
+    li.classList.remove("playing");
+    li.querySelector(".play").setAttribute("aria-label", "Play " + li.dataset.title);
+  }
+})();
+</script>
+</body>
+</html>
